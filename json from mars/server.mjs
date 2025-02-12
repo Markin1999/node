@@ -1,13 +1,11 @@
-const http = require("http"); // Importa il modulo HTTP
-
-// Crea il server HTTP
+const http = require("http");
 const server = http.createServer((req, res) => {
-  const responseBody = JSON.stringify({ location: "Mars" }); // Corpo della risposta JSON
+  const responseBody = JSON.stringify({ location: "Mars" });
   res.writeHead(200, {
     "Content-Type": "application/json",
     "Content-Length": responseBody.length,
-  }); // Imposta le intestazioni della risposta
-  res.end(responseBody); // Invia la risposta JSON
+  });
+  res.end(responseBody);
 });
 
 const PORT = 3000;
